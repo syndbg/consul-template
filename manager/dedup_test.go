@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
+	"github.com/syndbg/consul-template/dependency"
+	"github.com/syndbg/consul-template/template"
 )
 
 func TestDedup_StartStop(t *testing.T) {

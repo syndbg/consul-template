@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/consul-template/renderer"
+	"github.com/syndbg/consul-template/renderer"
 	"github.com/stretchr/testify/assert"
 )
 

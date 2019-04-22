@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
+	"github.com/syndbg/consul-template/config"
+	dep "github.com/syndbg/consul-template/dependency"
+	"github.com/syndbg/consul-template/template"
 )
 
 func TestRunner_Receive(t *testing.T) {
@@ -781,7 +781,7 @@ func TestRunner_Start(t *testing.T) {
 
 	// verifies that multiple differing templates that share
 	// a wait parameter call an exec function
-	// https://github.com/hashicorp/consul-template/issues/1043
+	// https://github.com/syndbg/consul-template/issues/1043
 	t.Run("multi-template-exec", func(t *testing.T) {
 		t.Parallel()
 

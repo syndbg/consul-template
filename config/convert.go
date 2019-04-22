@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/hashicorp/consul-template/signals"
+	"github.com/syndbg/consul-template/signals"
 )
 
 // Bool returns a pointer to the given bool.

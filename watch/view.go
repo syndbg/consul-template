@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/syndbg/consul-template/dependency"
 )
 
 const (

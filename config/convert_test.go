@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/consul-template/signals"
+	"github.com/syndbg/consul-template/signals"
 )
 
 func TestBool(t *testing.T) {

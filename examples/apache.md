@@ -49,5 +49,5 @@ ProxyPass /api/api/ balancer://api/
 ProxyPassReverse /api/api/ balancer://api/
 ```
 
-- For a list of functions, please see the [Consul Template README](https://github.com/hashicorp/consul-template)
+- For a list of functions, please see the [Consul Template README](https://github.com/syndbg/consul-template)
 - For template syntax, please see [the golang text/template documentation](https://golang.org/pkg/text/template/)

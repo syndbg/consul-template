@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/consul-template/config"
-	dep "github.com/hashicorp/consul-template/dependency"
-	"github.com/hashicorp/consul-template/template"
+	"github.com/syndbg/consul-template/config"
+	dep "github.com/syndbg/consul-template/dependency"
+	"github.com/syndbg/consul-template/template"
 	"github.com/hashicorp/consul/testutil"
 )
 

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	dep "github.com/hashicorp/consul-template/dependency"
+	dep "github.com/syndbg/consul-template/dependency"
 )
 
 func TestNewTemplate(t *testing.T) {
