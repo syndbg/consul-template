@@ -2,9 +2,9 @@ module github.com/syndbg/consul-template
 
 go 1.12
 
-replace github.com/hashicorp/vault/api => github.com/syndbg/vault/api v1.1.2-FIXED
+replace github.com/hashicorp/vault/api => github.com/syndbg/vault/api v0.0.0-20190418224949-6ec1bcfb20c2
 
-replace github.com/hashicorp/vault => github.com/syndbg/vault v1.1.2-FIXED
+replace github.com/hashicorp/vault => github.com/syndbg/vault v0.0.0-20190418224949-6ec1bcfb20c2
 
 replace github.com/hashicorp/consul/api => github.com/hashicorp/consul/api v1.0.1
 
@@ -22,7 +22,6 @@ require (
 	github.com/go-ldap/ldap v3.0.3+incompatible // indirect
 	github.com/gocql/gocql v0.0.0-20190418090649-59a610c947c5 // indirect
 	github.com/gorilla/websocket v1.4.0 // indirect
-	github.com/hashicorp/consul v0.0.0-20180711200419-73e3252076f6
 	github.com/hashicorp/consul/api v1.0.1
 	github.com/hashicorp/go-gatedio v0.0.0-20151013192243-8b8de1022221
 	github.com/hashicorp/go-hclog v0.8.0
@@ -42,8 +41,8 @@ require (
 	github.com/mitchellh/hashstructure v0.0.0-20170609045927-2bca23e0e452
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/pkg/errors v0.8.1
+	github.com/spf13/pflag v1.0.3 // indirect
 	github.com/stretchr/testify v1.3.0
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5 // indirect
-	github.com/ugorji/go v1.1.4 // indirect
 	gopkg.in/yaml.v2 v2.2.2
 )
