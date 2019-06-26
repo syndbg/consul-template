@@ -219,9 +219,9 @@ func isKVv2(client *api.Client, path string) (string, bool, error) {
 		defer resp.Body.Close()
 	}
 	if err != nil {
-		// If we get a 404 we are using an older version of vault, default to
+		// If we get a 404 or 403 we are using an older version of vault, default to
 		// version 1
-		if resp != nil && resp.StatusCode == 404 {
+		if resp != nil && (resp.StatusCode == 404 || resp.StatusCode == 403) {
 			return "", false, nil
 		}
 
