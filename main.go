@@ -7,5 +7,5 @@ import (
 
 func main() {
 	cliInstance := cli.NewCLI(os.Stdout, os.Stderr)
-	os.Exit(cliInstance.Run(os.Args))
+	os.Exit(cliInstance.Run("", os.Args))
 }

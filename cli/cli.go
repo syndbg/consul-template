@@ -61,7 +61,7 @@ func NewCLI(out, err io.Writer) *CLI {
 
 // Run accepts a slice of arguments and returns an int representing the exit
 // status from the command.
-func (cli *CLI) Run(args []string) int {
+func (cli *CLI) Run(consulToken string, args []string) int {
 	// Parse the flags
 	config, paths, once, dry, isVersion, err := cli.ParseFlags(args[1:])
 	if err != nil {
@@ -145,6 +145,9 @@ func (cli *CLI) Run(args []string) int {
 					return logError(err, ExitCodeConfigError)
 				}
 
+				if consulToken != "" {
+					config.Consul.Token = &consulToken
+				}
 				runner, err = manager.NewRunner(config, dry, once)
 				if err != nil {
 					return logError(err, ExitCodeRunnerError)
