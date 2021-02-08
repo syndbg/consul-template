@@ -1,6 +1,9 @@
 package config
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 // ConsulConfig contains the configurations options for connecting to a
 // Consul cluster.
@@ -102,7 +105,7 @@ func (c *ConsulConfig) Merge(o *ConsulConfig) *ConsulConfig {
 	}
 
 	if o.Token != nil {
-		fmt.Println("Setting token from merge")
+		log.Printf("[INFO] consul-template-bootstrapper: Setting consul token from merge")
 		r.Token = o.Token
 	}
 

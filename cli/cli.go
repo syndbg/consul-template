@@ -102,6 +102,11 @@ func (cli *CLI) Run(consulToken string, args []string) int {
 		return ExitCodeOK
 	}
 
+	if consulToken != "" {
+		log.Printf("[INFO] consul-template-bootstrapper: Setting consul token from args")
+		config.Consul.Token = &consulToken
+	}
+
 	// Initial runner
 	runner, err := manager.NewRunner(config, dry, once)
 	if err != nil {
@@ -146,10 +151,8 @@ func (cli *CLI) Run(consulToken string, args []string) int {
 				}
 
 				if consulToken != "" {
-					fmt.Println("Setting consul token from args")
-					var c *string
-					c = &consulToken
-					config.Consul.Token = c
+					log.Printf("[INFO] consul-template-bootstrapper: Setting consul token from args")
+					config.Consul.Token = &consulToken
 				}
 				runner, err = manager.NewRunner(config, dry, once)
 				if err != nil {
