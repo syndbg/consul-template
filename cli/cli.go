@@ -146,7 +146,10 @@ func (cli *CLI) Run(consulToken string, args []string) int {
 				}
 
 				if consulToken != "" {
-					config.Consul.Token = &consulToken
+					fmt.Println("Setting consul token from args")
+					var c *string
+					c = &consulToken
+					config.Consul.Token = c
 				}
 				runner, err = manager.NewRunner(config, dry, once)
 				if err != nil {

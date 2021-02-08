@@ -102,6 +102,7 @@ func (c *ConsulConfig) Merge(o *ConsulConfig) *ConsulConfig {
 	}
 
 	if o.Token != nil {
+		fmt.Println("Setting token from merge")
 		r.Token = o.Token
 	}
 
